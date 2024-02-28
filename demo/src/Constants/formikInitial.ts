@@ -12,8 +12,20 @@ const formik = {
     }
 }
 
-function updateFormikValues(v: agentObjectType) {
-    formik.initialValues = { ...v };
+function updateFormikValues(v?: agentObjectType) {
+    if (v) {
+        formik.initialValues = { ...v };
+    } else {
+        formik.initialValues = {
+            company: "",
+            person: "",
+            mobile: "",
+            lanline: "",
+            license: "",
+            p_email: "",
+            s_email: "",
+        }
+    }
 }
 
 export { formik, updateFormikValues }

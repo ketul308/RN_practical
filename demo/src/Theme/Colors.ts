@@ -8,7 +8,7 @@ const colors = {
     red: "#FF0000",
 
     fontDark: "#2a2a2c",
-    fontLight: "#dbdbdb",
+    fontLight: "#d1d1d1",
     syan: "#1bffeb",
 
 }

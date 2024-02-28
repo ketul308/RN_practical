@@ -26,5 +26,8 @@ export const message = {
     required_mobile: "Mobile number is required",
     required_lanline: "Lanline number is required",
     required_licence: "License number is required",
+    primary_secondary_email: "Primary and secondary email must be different!",
+
+    exit: "Are you sure you want to exit"
 }
 

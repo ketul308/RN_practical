@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 import { colors } from "../../Theme/Colors";
-import { fontsize } from "../../Theme/Font";
+import { fontFamily, fontsize } from "../../Theme/Font";
 import { metrix } from "../../Theme/Contants";
 
 const styles = StyleSheet.create({
@@ -10,8 +10,14 @@ const styles = StyleSheet.create({
     viewMainpad: {
         paddingHorizontal: metrix.hp_2
     },
+    textCancel: {
+        color: colors.fontDark,
+        fontFamily: fontFamily.Quicksand_SemiBold,
+        fontSize: fontsize[12],
+    },
     textAddAgent: {
         color: colors.fontDark,
+        fontFamily: fontFamily.Quicksand_Bold,
         fontSize: fontsize[20],
         marginTop: metrix.hp_6,
     },

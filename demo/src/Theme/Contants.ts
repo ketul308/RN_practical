@@ -24,6 +24,7 @@ const metrix = {
     hp_6: hp(6),
     hp_6_5: hp(6.5),
     hp_7: hp(7),
+    hp_10: hp(10),
 
 
     wp_100: wp(100),

@@ -1,15 +1,13 @@
 import { createModel } from "@rematch/core";
 import { RootModel } from ".";
+import { agentObjectType } from "../../Screens/AddAgentScreen/type";
 
 export const agent = createModel<RootModel>()({
     state: {
-        AgentData: {}
+        AgentData: {} as agentObjectType
     },
     reducers: {
-        setAgent(state, payload: any) {
-            console.log('====================================');
-            console.log(state, payload);
-            console.log('====================================');
+        setAgent(state, payload) {
             return {
                 ...state,
                 AgentData: payload

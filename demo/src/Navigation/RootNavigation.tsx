@@ -9,7 +9,6 @@ import ManageAgentScreen from '../Screens/ManageAgentScreen/ManageAgentScreen'
 const RootNavigation = () => {
 
     const Stack = createStackNavigator<MainStack>();
-
     return (
         <NavigationContainer>
             <Stack.Navigator screenOptions={{ headerShown: false, ...TransitionPresets.ModalSlideFromBottomIOS }}>

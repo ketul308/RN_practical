@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 import { colors } from "../../Theme/Colors";
-import { fontsize } from "../../Theme/Font";
-import { metrix } from "../../Theme/Contants";
+import { fontFamily, fontsize } from "../../Theme/Font";
+import { hp, metrix } from "../../Theme/Contants";
 import { RNStyles } from "../../Theme/RNStyles";
 
 
@@ -13,15 +13,14 @@ const styles = StyleSheet.create({
         color: colors.fontDark,
         fontSize: fontsize[20],
         marginTop: metrix.hp_6,
-        marginLeft: metrix.hp_2
+        marginLeft: metrix.hp_2,
+        fontFamily: fontFamily.Quicksand_Bold
     },
     viewMid: {
-        flex: 0.87,
-        // backgroundColor: 'red'
+        flex: 1,
     },
     viewBottom: {
-        flex: 0.13,
-        backgroundColor: '#ccc'
+        justifyContent: "center"
     },
     viewAgentData: {
         ...RNStyles.shadowStyle,
@@ -34,21 +33,40 @@ const styles = StyleSheet.create({
     },
     textEdit: {
         color: colors.fontDark,
-        fontSize: fontsize[12],
+        fontSize: fontsize[13],
+        fontFamily: fontFamily.Quicksand_Bold,
         marginLeft: metrix.hp_2,
         textDecorationLine: "underline"
     },
+    textcompany: {
+        color: colors.fontDark,
+        fontSize: fontsize[20],
+        lineHeight: fontsize[20],
+        fontFamily: fontFamily.Quicksand_Bold,
+        marginLeft: metrix.hp_1,
+    },
     textGray: {
         color: colors.fontLight,
-        fontSize: fontsize[12],
-        marginLeft: metrix.hp_2,
-        textDecorationLine: "underline"
+        fontFamily: fontFamily.Quicksand_SemiBold,
+        fontSize: fontsize[13],
+        lineHeight: fontsize[16],
+        marginLeft: metrix.hp_1,
     },
     viewLine: {
         height: 1,
         backgroundColor: colors.fontLight,
         marginVertical: metrix.hp_1
     },
+    iconUser: {
+        height: metrix.hp_3,
+        width: metrix.hp_3,
+    },
+    imagePlus: {
+        height: hp(40),
+        width: hp(40),
+        alignSelf: "center",
+
+    }
 })
 
 export { styles }

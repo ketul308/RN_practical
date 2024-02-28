@@ -1,4 +1,4 @@
-import { View, Text, } from 'react-native'
+import { View, Text, Alert, } from 'react-native'
 import React, { useEffect, } from 'react'
 import KeyboardScroll from '../../Components/KeyboardScroll/KeyboardScroll'
 import CustomButton from '../../Components/CustomButton/CustomButton'
@@ -18,16 +18,22 @@ import { useSelector } from 'react-redux'
 
 const AddAgentScreen: React.FC<Props> = (props: Props) => {
     const { navigation } = props;
+    const AgentData: agentObjectType = useSelector((e: any) => e.agent.AgentData);
 
-    function handleSubmit(v: agentObjectType) {
-        dispatch.agent.setAgent(v);
-        navigation.goBack();
+    function handleSubmit(value: agentObjectType) {
+        if (value.p_email !== value.s_email) {
+            dispatch.agent.setAgent(value);
+            navigation.goBack();
+        } else {
+            Alert.alert("Alert", message.primary_secondary_email)
+        }
     }
 
-    const AgentData: agentObjectType = useSelector((e: any) => e.agent.AgentData)
     useEffect(() => {
         if (AgentData.company) {
-            updateFormikValues(AgentData)
+            updateFormikValues(AgentData);
+        } else {
+            updateFormikValues();
         }
     }, [AgentData])
 
@@ -59,7 +65,7 @@ const AddAgentScreen: React.FC<Props> = (props: Props) => {
                     >
                         <CustomHeader
                             onPressLeftIcon={() => navigation.goBack()}
-                            leftIcon={<Text>{message.cancel}</Text>}
+                            leftIcon={<Text style={styles.textCancel}>{message.cancel}</Text>}
                         />
                         <View style={styles.viewMainpad}>
                             <Text style={styles.textAddAgent}>{message.addAgent}</Text>
@@ -150,7 +156,6 @@ const AddAgentScreen: React.FC<Props> = (props: Props) => {
                                 </View>
                             </View>
                         </View>
-
                     </KeyboardScroll>
                 )
             }}

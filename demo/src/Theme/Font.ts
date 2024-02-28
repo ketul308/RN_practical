@@ -1,5 +1,13 @@
 import { RFValue } from "react-native-responsive-fontsize"
 
+const fontFamily = {
+    Quicksand_Bold: "Quicksand-Bold",
+    Quicksand_Light: "Quicksand-Light",
+    Quicksand_Medium: "Quicksand-Medium",
+    Quicksand_Regular: "Quicksand-Regular",
+    Quicksand_SemiBold: "Quicksand-SemiBold",
+}
+
 const fontsize = {
     10: RFValue(10),
     11: RFValue(11),
@@ -16,4 +24,4 @@ const fontsize = {
     40: RFValue(40),
 }
 
-export { fontsize }
+export { fontsize, fontFamily }

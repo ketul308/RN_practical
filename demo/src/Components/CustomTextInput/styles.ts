@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 import { colors } from "../../Theme/Colors";
 import { metrix } from "../../Theme/Contants";
-import { fontsize } from "../../Theme/Font";
+import { fontFamily, fontsize } from "../../Theme/Font";
 
 export const styles = StyleSheet.create({
     TextInput: {
@@ -9,6 +9,7 @@ export const styles = StyleSheet.create({
         height: metrix.hp_7,
         borderBottomLeftRadius: 5,
         borderBottomRightRadius: 5,
+        fontFamily: fontFamily.Quicksand_Regular,
         color: colors.white,
         backgroundColor: colors.white,
         fontSize: fontsize[12]
